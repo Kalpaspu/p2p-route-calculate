@@ -67,3 +67,4 @@ The request asks for GeoJSON route geometry. Coordinates are sent as longitude f
 - OpenStreetMap tile servers have usage policies and rate limits. A production deployment should follow the tile provider’s policy and consider a dedicated tile provider.
 - Location accuracy depends on the device, browser permissions, and whether GPS is available.
 - The app does not store or send location history; the current position is used in the browser and for route requests.
+# p2p-route-calculate
