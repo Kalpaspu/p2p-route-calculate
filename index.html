@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RouteLine — live route planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <section class="planner-card">
+          <div class="card-heading"><span>Route details</span><span class="status-dot"></span></div>
+          <label class="location-field origin-field">
+            <span class="pin pin-start">A</span>
+            <span class="field-copy"><small>STARTING POINT</small><input id="startInput" value="-33.8688, 151.2093" aria-label="Starting point latitude and longitude" /></span>
+          </label>
+          <div class="connector"></div>
+          <label class="location-field">
+            <span class="pin pin-end">B</span>
+            <span class="field-copy"><small>DESTINATION</small><input id="endInput" value="0, 0" aria-label="Destination latitude and longitude" /></span>
+          </label>
+          <button id="routeButton" class="primary-button"><span>Update route</span><span>→</span></button>
+          <button id="locateButton" class="text-button"><span class="crosshair">◎</span> Use my current location</button>
+          <p class="hint">Tip: click anywhere on the map to set points A and B.</p>
+        </section>
+
+      </aside>
+      <section class="map-wrap">
+        <div id="map"></div>
+        <div class="map-toolbar"><button id="fitButton" title="Fit route to map">⌗</button><button id="mapLocateButton" title="Locate me">⊙</button></div>
+        <div class="map-legend"><span><i class="legend-line"></i> Planned route</span><span><i class="legend-dot"></i> Your location</span></div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+  </body>
+</html>
